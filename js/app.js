@@ -7,9 +7,9 @@ var counter = $('#counter'),
 number.val(0);
 
 function animate(x) {
-    x.animate({marginRight: "20px", opacity: "1", display: "block !important"},300)
+    x.animate({marginRight: "20px", opacity: "1"},300)
     .delay(800)
-    .animate({marginRight: "-20em", opacity: "0.5", display: "none"},500);   
+    .animate({marginRight: "-20em", opacity: "0.5"},500);   
 };
 
 function rest(){    
@@ -40,10 +40,8 @@ counter.click(function(){
         animate(finish);
         var message = "Please enter a number";
         finish.html(message);
+         number.focus();
     };
-    if(count == 0){
-        number.focus();
-    }
 });
 
 resetForm.click(function(e){
